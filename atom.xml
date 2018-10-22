@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://yangwencheng.top/"/>
-  <updated>2018-10-18T07:26:07.027Z</updated>
+  <updated>2018-10-22T05:31:44.416Z</updated>
   <id>https://yangwencheng.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>dp px dpi</title>
+    <link href="https://yangwencheng.top/2018/10/22/dp-px-dpi/"/>
+    <id>https://yangwencheng.top/2018/10/22/dp-px-dpi/</id>
+    <published>2018-10-22T05:29:10.000Z</published>
+    <updated>2018-10-22T05:31:44.416Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="px"><a href="#px" class="headerlink" title="px"></a>px</h6><p>像素数量,1920px×1080px</p><h6 id="dpi"><a href="#dpi" class="headerlink" title="dpi"></a>dpi</h6><p>每英寸多少像素来评价屏幕的显示效果(假如手机分辨率是1920×1080，但是屏幕是几十寸的，那显示效果将不会很好，甚至你有可能看到小的像素块，那将更影响视觉效果。)</p><h6 id="dp"><a href="#dp" class="headerlink" title="dp"></a>dp</h6><ul><li>其实dp就是为了使得开发者设置的长度能够根据不同屏幕(分辨率/尺寸也就是dpi)获得不同的像素(px)数量。比如：我将一个控件设置长度为1dp，那么在160dpi上该控件长度为1px，在240dpi的屏幕上该控件的长度为1*240/160=1.5个像素点。</li><li>也就是dp会随着不同屏幕而改变控件长度的像素数量。</li><li>dp最终都要化为像素数量来衡量大小的，因为只有像素数量最直观。<br><img src="http://imgs.xueui.cn/wp-content/uploads/2014/01/31.png" alt="image"><h6 id="实际密度与系统密度"><a href="#实际密度与系统密度" class="headerlink" title="实际密度与系统密度"></a>实际密度与系统密度</h6><img src="http://imgs.xueui.cn/wp-content/uploads/2014/01/2.png" alt="image"><h6 id="dp与px的转换"><a href="#dp与px的转换" class="headerlink" title="dp与px的转换"></a>dp与px的转换</h6>在安卓中，系统密度为160dpi的中密度手机屏幕为基准屏幕，即320×480的手机屏幕。在这个屏幕中，1dp=1px。</li></ul><p>100dp在320×480（mdpi，160dpi）中是100px。那么100dp在480×800（hdpi，240dpi）的手机上是多少px呢？我们知道100dp在两个手机上看起来差不多大，根据160与240的比例关系，我们可以知道，在480×800中，100dp实际覆盖了150px。因此，如果你为mdpi手机提供了一张100px的图片，这张图片在hdpi手机上就会拉伸至150px，但是他们都是100dp。</p><p>中密度和高密度的缩放比例似乎可以不通过160dpi和240dpi计算，而通过320px和480px也可以算出。但是按照宽度计算缩放比例不适用于超高密度xhdpi和超超高密度xxhdpi了。即720×1280中1dp是多少px呢？如果用720/320，你会得出1dp=2.25px，实际这样算出来是不对的。dp与px的换算要以系统密度为准，720×1280的系统密度为320，320×480的系统密度为160，320/160=2，那么在720×1280中，1dp=2px。同理，在1080×1920中，1dp=3px。</p><p>ldpi:mdpi:hdpi:xhdpi:xxhdpi=3:4:6:8:12，我们发现，相隔数字之间还是2倍的关系。计算的时候，以mdpi为基准。比如在720×1280（xhdpi）中，1dp等于多少px呢？mdpi是4，xhdpi是8，2倍的关系，即1dp=2px。反着计算更重要，比如你用PhotoShop在720×1280的画布中制作了界面效果图，两个元素的间距是20px，那要标注多少dp呢？2倍的关系，那就是10dp！</p><p><img src="http://imgs.xueui.cn/wp-content/uploads/2014/01/4.png" alt="image"></p><h6 id="density"><a href="#density" class="headerlink" title="density"></a>density</h6><p>当前设备屏幕总宽度（单位为像素）/ 设计图总宽度（单位为 dp) = density</p><p>dp = px / density</p><p>当前设备屏幕总宽度（单位为像素）/ 设计图总宽度（单位为 dp) = density</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h6 id=&quot;px&quot;&gt;&lt;a href=&quot;#px&quot; class=&quot;headerlink&quot; title=&quot;px&quot;&gt;&lt;/a&gt;px&lt;/h6&gt;&lt;p&gt;像素数量,1920px×1080px&lt;/p&gt;
+&lt;h6 id=&quot;dpi&quot;&gt;&lt;a href=&quot;#dpi&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>我个人博客的第一篇博客，哈哈哈...</title>
